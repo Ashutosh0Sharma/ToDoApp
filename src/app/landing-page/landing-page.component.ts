@@ -31,4 +31,11 @@ export class LandingPageComponent {
     this.isSidenavOpen = !this.isSidenavOpen;
     this.showCloseButton = !this.isLargeScreen && this.isSidenavOpen;
   }
+
+
+  sidebarOpened = true;
+
+  toggleSidebar() {
+    this.sidebarOpened = !this.sidebarOpened;
+  }
 }

@@ -10,11 +10,13 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

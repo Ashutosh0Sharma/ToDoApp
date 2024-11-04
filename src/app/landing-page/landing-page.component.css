@@ -88,3 +88,11 @@ button {
     outline: none;
     box-shadow: none;
 }
+
+
+.close-button {
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    z-index: 1;
+}
