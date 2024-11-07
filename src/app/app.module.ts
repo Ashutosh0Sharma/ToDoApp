@@ -11,12 +11,16 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CalendarComponent } from './dashboard/calendar/calendar.component';
+import { TimeChartComponent } from './dashboard/time-chart/time-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     DashboardComponent,
+    CalendarComponent,
+    TimeChartComponent,
   ],
   imports: [
     BrowserModule,

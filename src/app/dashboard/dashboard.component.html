@@ -1,13 +1,12 @@
-
 <div class="container">
-    <mat-grid-list cols="2" rowHeight="1.7:1">
-        <mat-grid-tile>1</mat-grid-tile>
-        <mat-grid-tile>
-          <mat-card class="demo-inline-calendar-card">
-            <mat-calendar [(selected)]="selected"></mat-calendar>
-          </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>3</mat-grid-tile>
-        <mat-grid-tile>4</mat-grid-tile>
-      </mat-grid-list>
+  <mat-grid-list cols="2" rowHeight="1.7:1">
+    <mat-grid-tile>
+      <app-time-chart></app-time-chart>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-calendar></app-calendar>
+    </mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+  </mat-grid-list>
 </div>
