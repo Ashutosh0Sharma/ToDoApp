@@ -1,10 +1,70 @@
+<div>
+  <button mat-icon-button (click)="toggleSidenav()" class="menu-button">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <!-- <button *ngIf="showCloseButton"  mat-icon-button (click)="toggleSidenav()" class="floating-close-button">
+    <mat-icon>close</mat-icon>
+  </button> -->
+</div>
+
+<div>
+
+</div>
 <mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="side" opened class="example-sidenav" [fixedInViewport]=true [fixedTopGap]=0
-  [fixedBottomGap]=0>
-    
+
+  <mat-sidenav #sidenav mode="side" [(opened)]="isSidenavOpen" class="example-sidenav" [fixedInViewport]=true [fixedTopGap]=0
+    [fixedBottomGap]=0>
+    <button
+    mat-icon-button
+    class="close-button"
+    (click)="toggleSidenav()"
+    aria-label="Close sidebar">
+    <mat-icon>close</mat-icon>
+  </button>
+    <a class="name">
+      <h1> To-Do Pro</h1>
+    </a>
+    <mat-list-item>
+      <a class="menu-icons" routerLink="/home/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" >
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
+    </mat-list-item>
+    <mat-list-item>
+      <a class="menu-icons">
+        <mat-icon>check_circle</mat-icon>
+        <span>Task</span>
+      </a>
+    </mat-list-item>
+    <mat-list-item>
+      <a class="menu-icons">
+        <mat-icon>star_border</mat-icon>
+        <span>Goals</span>
+      </a>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <!-- <mat-list-item>
+      <a class="menu-icons">
+        <mat-icon>help</mat-icon>
+        <span>Help</span>
+      </a>
+    </mat-list-item> -->
+
+    <!-- <div class="bottom-nav">
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <a class="menu-icons">
+          <mat-icon>settings</mat-icon>
+          <span>Settings</span>
+        </a>
+      </mat-list-item>
+    </div> -->
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <h1>Main Content</h1>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
