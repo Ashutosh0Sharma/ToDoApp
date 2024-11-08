@@ -3,8 +3,10 @@ import { Component } from '@angular/core';
 
 // import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
+import * as Utils from '../../Utils'
 
-import { Chart } from 'chart.js/auto';
+
+import { Chart, ChartConfiguration } from 'chart.js/auto';
 
 @Component({
   selector: 'app-time-chart',
@@ -19,36 +21,59 @@ export class TimeChartComponent {
 
   createChart() {
 
-    this.chart = new Chart("MyChart", {
-      type: 'bar', //this denotes tha type of chart
+
+    let config: ChartConfiguration = {
+      type: 'line', //this denotes tha type of chart
       data: {// values on X-Axis
-        labels: ['2022-05-10', '2022-05-11', '2022-05-12', '2022-05-13',
-          '2022-05-14', '2022-05-15', '2022-05-16', '2022-05-17',],
+        labels: this.generateLabels(),
         datasets: [
           {
-            label: "Sales",
-            data: ['467', '576', '572', '79', '92',
-              '574', '573', '576'],
-            backgroundColor: 'blue'
-          },
-          {
-            label: "Profit",
-            data: ['542', '542', '536', '327', '17',
-              '0.00', '538', '541'],
-            backgroundColor: 'limegreen'
+            label: 'Dataset',
+            data: this.generateData(),
+            borderColor: Utils.CHART_COLORS.red,
+            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red),
+            fill: 'start'
           }
         ]
       },
       options: {
-        aspectRatio: 1
-      }
+        plugins: {
+          filler: {
+            propagate: false,
+          },
+          title: {
+            display: true,
+            text: 'adasasdads'
+          }
+        },
+        interaction: {
+          intersect: false,
+        }
+      },
 
-    });
+    }
+
+    this.chart = new Chart("MyChart", config);
   }
 
 
   ngOnInit(): void {
     this.createChart();
   }
+
+
+  inputs = {
+    min: -100,
+    max: 100,
+    count: 8,
+    decimals: 2,
+    continuity: 1
+  };
+
+  generateLabels = () => {
+    return Utils.months({ count: this.inputs.count });
+  };
+
+  generateData = () => (Utils.numbers(this.inputs));
 }
 
