@@ -7,25 +7,36 @@
   </button> -->
 </div>
 
-<div>
-
-</div>
+<div></div>
 <mat-sidenav-container class="example-container">
-
-  <mat-sidenav #sidenav mode="side" [(opened)]="isSidenavOpen" class="example-sidenav" [fixedInViewport]=true [fixedTopGap]=0
-    [fixedBottomGap]=0>
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    [(opened)]="isSidenavOpen"
+    class="example-sidenav"
+    [fixedInViewport]="true"
+    [fixedTopGap]="0"
+    [fixedBottomGap]="0"
+  >
     <button
-    mat-icon-button
-    class="close-button"
-    (click)="toggleSidenav()"
-    aria-label="Close sidebar">
-    <mat-icon>close</mat-icon>
-  </button>
+      *ngIf="!isLargeScreen"
+      mat-icon-button
+      class="close-button"
+      (click)="toggleSidenav()"
+      aria-label="Close sidebar"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
     <a class="name">
-      <h1> To-Do Pro</h1>
+      <h1>To-Do Pro</h1>
     </a>
     <mat-list-item>
-      <a class="menu-icons" routerLink="/home/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" >
+      <a
+        class="menu-icons"
+        routerLink="/home/dashboard"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+      >
         <mat-icon>dashboard</mat-icon>
         <span>Dashboard</span>
       </a>
