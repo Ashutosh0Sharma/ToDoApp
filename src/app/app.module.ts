@@ -13,6 +13,7 @@ import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalendarComponent } from './dashboard/calendar/calendar.component';
 import { TimeChartComponent } from './dashboard/time-chart/time-chart.component';
+import { TaskListComponent } from './dashboard/task-list/task-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TimeChartComponent } from './dashboard/time-chart/time-chart.component'
     DashboardComponent,
     CalendarComponent,
     TimeChartComponent,
+    TaskListComponent,
   ],
   imports: [
     BrowserModule,
