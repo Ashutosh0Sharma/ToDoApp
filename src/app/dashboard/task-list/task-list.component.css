@@ -1,0 +1,13 @@
+.col {
+    background-color: aqua;
+}
+
+
+.headerText {
+    display: flex;
+    font-size: x-large;
+    padding-top: 1.25%;
+}
+
+
+.headerButton {}
