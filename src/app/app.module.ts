@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalendarComponent } from './dashboard/calendar/calendar.component';
 import { TimeChartComponent } from './dashboard/time-chart/time-chart.component';
 import { TaskListComponent } from './dashboard/task-list/task-list.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { TaskListComponent } from './dashboard/task-list/task-list.component';
   exports: [
     MaterialModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync('noop')
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

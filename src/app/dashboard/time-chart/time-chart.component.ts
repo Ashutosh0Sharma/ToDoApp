@@ -9,9 +9,10 @@ import * as Utils from '../../Utils'
 import { Chart, ChartConfiguration } from 'chart.js/auto';
 
 @Component({
-  selector: 'app-time-chart',
-  templateUrl: './time-chart.component.html',
-  styleUrls: ['./time-chart.component.css'],
+    selector: 'app-time-chart',
+    templateUrl: './time-chart.component.html',
+    styleUrls: ['./time-chart.component.css'],
+    standalone: false
 })
 export class TimeChartComponent {
 
