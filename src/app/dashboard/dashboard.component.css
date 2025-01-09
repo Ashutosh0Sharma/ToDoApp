@@ -4,6 +4,30 @@ mat-grid-tile {
   /* height: 50%; */
 }
 
+.container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 0; */
+}
+
+
+.item {
+  flex-grow: 1;
+  flex-basis: 200;
+  width: auto;
+  height: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* padding-bottom: 5px; */
+  margin: 10px;
+  /* margin-left: 10px; */
+  /* margin-right: 10px; */
+  border: 5px solid gray;
+  /* margin: 0; */
+
+}
+
+
 
 /* .mat-grid-tile-content {
   width: 100%;
@@ -12,6 +36,7 @@ mat-grid-tile {
 
 
 .calendarComponent {
+  flex-grow: 1;
   width: 80%;
   height: 100%;
   display: flex;
@@ -19,6 +44,7 @@ mat-grid-tile {
 }
 
 .timeChatComponent {
+  flex-grow: 1;
   height: 100%;
   width: 100%;
   display: flex;
@@ -27,6 +53,7 @@ mat-grid-tile {
 
 
 .taskListComponent {
+  flex-grow: 1;
   height: 100%;
   width: 100%;
   display: block;

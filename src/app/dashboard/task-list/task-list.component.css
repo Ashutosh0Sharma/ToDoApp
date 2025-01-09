@@ -1,5 +1,7 @@
+@use '@angular/material' as mat;
+
 .col {
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 
@@ -10,9 +12,65 @@
 }
 
 
-.headerButton {}
-
 .button-option {
     margin-top: 2%;
     display: flex;
+
+    /* mat-button-toggle {
+        margin: 2%;
+    } */
+}
+
+
+
+
+.mat-stroked-button {
+    border-color: red;
+    /* Replace with your desired color code */
+}
+
+
+.container-fluid {
+    display: grid;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+
+
+.header .button-option .taskList {
+    flex-grow: 1;
+    flex-basis: 200;
+    /* /* padding: 10px; */
+    /* margin: 10px; */
+    /* border: 5px solid gray; */
+}
+
+
+.item {
+    flex-grow: 1;
+    flex-basis: 200;
+    padding: 10px;
+    margin: 10px;
+    /* border: 5px solid gray; */
+}
+
+.every {
+    /* background-color: #95cef8; */
+    background-color: rgba(149, 206, 248, 0.6);
+}
+
+.toDo {
+    /* background-color: #f6aeae; */
+    background-color: rgba(246, 174, 174, 0.6);
+}
+
+.inProgress {
+    /* background-color: #f6e08c; */
+    background-color: rgba(246, 224, 140, 0.6);
+}
+
+.done {
+    /* background-color: #80f0ba; */
+    background-color: rgba(128, 240, 186, 0.6);
 }

@@ -1,4 +1,5 @@
-<div class="container text-center">
+<!-- <div class="container-fluid"> -->
+<div class="test">
   <div class="row">
     <div class="col headerText">Your Task</div>
     <div class="col headerButton">
@@ -7,15 +8,56 @@
       </button>
     </div>
   </div>
+</div>
 
-  <div class="container button-option">
-    <p>
-      Default appearance:
-      <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-        <mat-button-toggle value="bold">Bold</mat-button-toggle>
-        <mat-button-toggle value="italic">Italic</mat-button-toggle>
-        <mat-button-toggle value="underline">Underline</mat-button-toggle>
-      </mat-button-toggle-group>
-    </p>
+<div class="button-option">
+  <!-- <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary">Left</button>
+      <button type="button" class="btn btn-secondary">Middle</button>
+      <button type="button" class="btn btn-secondary">Right</button>
+    </div> -->
+
+  <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input
+          type="radio"
+          name="options"
+          id="option1"
+          autocomplete="off"
+          checked
+        />
+        Active
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off" />
+        Radio
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off" />
+        Radio
+      </label>
+    </div> -->
+
+  <!-- All ToDo In Progress Done-->
+  <div class="constainer-fluid">
+    <button mat-stroked-button class="item every">All</button>
+    <button mat-stroked-button class="item toDo">To Do</button>
+    <button mat-stroked-button class="item inProgress">In Progress</button>
+    <button mat-stroked-button class="item done">Done</button>
   </div>
 </div>
+
+<div class="taskList">
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let task of taskList">
+      <mat-checkbox
+        #checkBox
+        [checked]="task.Id"
+        (change)="getCompletedTask(task)"
+      >
+        {{ task.toDo }}
+      </mat-checkbox>
+    </mat-list-item>
+  </mat-list>
+</div>
+<!-- </div> -->

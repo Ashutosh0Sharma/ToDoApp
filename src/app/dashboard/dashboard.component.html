@@ -1,4 +1,4 @@
-<div>
+<!-- <div class="container">
   <mat-grid-list [cols]="6" rowHeight="7rem">
     <mat-grid-tile [colspan]="4" [rowspan]="4">
       <app-time-chart class="timeChatComponent"></app-time-chart>
@@ -11,4 +11,17 @@
     </mat-grid-tile>
     <mat-grid-tile [colspan]="2" [rowspan]="4">4</mat-grid-tile>
   </mat-grid-list>
+</div> -->
+
+<div class="container-fluid">
+  <div class="item" style="background-color: lightblue">
+    <app-time-chart class="timeChatComponent"></app-time-chart>
+  </div>
+  <div class="item" style="background-color: white">
+    <app-calendar class="calendarComponent"></app-calendar>
+  </div>
+  <div class="item" style="background-color: lightblue">
+    <app-task-list class="taskListComponent"></app-task-list>
+  </div>
+  <div class="item" style="background-color: white"></div>
 </div>

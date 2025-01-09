@@ -30,8 +30,8 @@ export function numbers(config) {
   var i, value;
 
   for (i = 0; i < count; ++i) {
-    value = (from[i] || 0) + this.rand(min, max);
-    if (this.rand() <= continuity) {
+    value = (from[i] || 0) + rand(min, max);
+    if (rand() <= continuity) {
       data.push(Math.round(dfactor * value) / dfactor);
     } else {
       data.push(null);
