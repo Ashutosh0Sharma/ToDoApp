@@ -22,6 +22,15 @@
 }
 
 
+.container {
+    height: 42vh;
+}
+
+.taskList {
+    height: 30vh;
+    overflow: scroll;
+}
+
 
 
 .mat-stroked-button {
@@ -74,3 +83,38 @@
     /* background-color: #80f0ba; */
     background-color: rgba(128, 240, 186, 0.6);
 }
+
+
+
+
+
+
+/* test */
+
+/* .container {
+    display: flex;
+    border: 1px solid;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.container>div {
+    flex: 1;
+    margin: 5px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+
+div.inner {
+    border-color: red;
+}
+
+.inner-alt {
+    position: relative;
+    overflow: auto;
+}
+
+.inner-alt>div {
+    height: 0;
+    min-height: 100%;
+} */

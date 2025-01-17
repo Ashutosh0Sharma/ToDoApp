@@ -28,6 +28,11 @@ mat-grid-tile {
 }
 
 
+.taskComponent {
+  max-height: 50vh !important
+}
+
+
 
 /* .mat-grid-tile-content {
   width: 100%;
@@ -58,4 +63,13 @@ mat-grid-tile {
   width: 100%;
   display: block;
   margin: 5% 0 0 0;
+}
+
+
+.todaysTaskComponent{
+    flex-grow: 1;
+      height: 100%;
+      width: 100%;
+      display: block;
+      margin: 5% 0 0 0;
 }
